@@ -6,14 +6,20 @@ class Employee {
     // Private attribute
     int salary;
     string band;
+    string name;
 
   public:
     // Setter
+    void setName(string nam)
+    {
+      name = nam;
+      cout <<"Masukkan Nama = ";
+      cin >> name;
+    }
     void setBand(string grup)
     {
         band = grup;
-        cout <<"Masukkan Band = ";
-        cin>>band;
+        
     }
     void setSalary(int s) {
       salary = s;
@@ -24,6 +30,10 @@ class Employee {
     int getSalary() {
       return salary;
     }
+    string getName()
+    {
+      return name;
+    }
 
     string getBand()
     {
@@ -31,16 +41,19 @@ class Employee {
     }
     void tampil()
     {
-        cout <<"\nNama Band = "<<band;
+       cout <<"\nNama : " <<name;
         cout <<"\nMendapat Gaji Rp." <<salary;
+                cout <<"\nNama Band = " <<band;
+
 
     }
 };
 
 int main() {
-  Employee myObj;
-  myObj.setSalary(0);
-  myObj.setBand("");
-    myObj.tampil();
+  Employee Roselia;
+  Roselia.setSalary(0);
+  Roselia.setBand("Roselia");
+  Roselia.setName("");
+    Roselia.tampil();
 
 } 
